@@ -18,7 +18,7 @@ Just open [http://uapasha.github.io/](http://uapasha.github.io/) and enjoy!
 - Click on any pockemon to see additional information on the right side of the screen.
 - Click on additional information to hide it.
 - You can use selector on the top of pokedex to filter by the type pokemons that are visible to you.
-- **It is responsible!** Well… at least as far was able to get it =) 
+- **It is responsible!** Well… at least as far as I was able to get it =) 
 
 #### Authors: Me - uapasha
 
