@@ -26,7 +26,12 @@ td {
 	background-color: #a94442;
 	margin-bottom: 10px;
 	margin-top: 10px;
+	height: 20%;
 }
+.home {
+	text-decoration: none;
+}
+
 .selectorRow {
 	background-color: #323232;
 	color: white;
@@ -100,14 +105,17 @@ div div .typeButton {
 	margin: 0px;
 }
 
-.row article:hover, #pDetailsTable:hover, #pDetails:hover {
-	cursor: pointer;
-}
-
 #typeSelector{
 	display: inline;
 	width: 50%;
 }
+
+
+/*////////////// add pointers on hover //////////////////////*/
+.row article:hover, #pDetailsTable:hover, #pDetails:hover {
+	cursor: pointer;
+}
+
 
 /*////////////   styles for types pseudo-buttons /////////////*/
 .Normal, .Ghost, .Psychic {
