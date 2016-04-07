@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <meta name="description" content="Pokedex task for JS Cotans">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Pokedex</title>
+</head>
+<body>
+  <div class="container">
+    
+    <div class = "row headerRow">
+
+      
+        <header class = "col-md-4 col-md-offset-4">
+          <div><h1>Pokedex</h1></div>
+        </header>
+
+    </div>  
+      
+    <div class = "row">
+      
+      <section class = "col-md-7 col-xs-7">
+      <div class="row selectorRow">
+
+        <div class="col-md-8 col-md-offset-2">
+          <label for="typeSelector"><h4>Type of Pokemons</h4></label>
+          <select class="form-control" id = "typeSelector">
+            <option>Any</option>
+          </select>
+        </div>
+      </div>
+
+        
+        <section class = "row" id = 'pokedex'>
+
+        </section>
+        <section>
+          <button id = "loadMore" class="btn btn-primary btn-lg btn-block">Load More</button>
+        </section>
+      </section>
+      
+      
+      <aside class = "col-md-5 col-xs-5" id = 'extraInfo'>
+        <section  id = "pDetails" class = 'center-block'></section>
+        <table id = "pDetailsTable" class="table table-bordered table-striped table-hover table-condensed"></table>
+      </aside>
+      
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
