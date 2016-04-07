@@ -225,6 +225,10 @@ $('html').on('click', '#extraInfo', function(){
   $('#pDetails').empty();
 })
 
+$('.headerRow').on('click', function() {
+  window.location.href="./";
+})
+
 //animate poketcards
 
 $('html').on('mouseenter', 'section.row article', function(){
