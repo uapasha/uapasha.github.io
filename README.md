@@ -6,7 +6,7 @@ Test task for JavaScript courses from **[kottans.org](http://kottans.org)**
 - jQuery
 - Bootstrap CSS
 
-####License: read LICENSE
+####License: read LICENCE.md
 
 ### Description:
 Client for **[http://pokeapi.co/](http://pokeapi.co/)**. This project is represented by single web page that loads bunch of **random** pokemons.
