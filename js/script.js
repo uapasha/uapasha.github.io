@@ -13,7 +13,7 @@ var numOnLoadMore = 6;
 
 // names of characteristics that are going to be displayed
 var characteristics = ['types', 'attack', 'defense', 'hp', 'sp_atk', 'sp_def', 
-  'speed', 'weight', 'moves']
+  'speed', 'weight', 'moves'];
 
 /////////////// Helpers Functions ///////////////////////
 
@@ -32,7 +32,7 @@ function getSelectedType(){
     $( "#typeSelector option:selected" ).each(function() {
       selectedType = $(this).text();
   });
-    return selectedType
+    return selectedType;
 }
 
 // return string with html block for element with animation that will be
@@ -44,19 +44,19 @@ function imgAnimationHtml(id) {
             '<img src="http://fs146.www.ex.ua/get/618668286407/237121151/81.gif"' +
             ' class="img-responsive center-block" id="animation" />' +
           '</div>' +
-        '</article>'
+        '</article>';
   
-  return html
+  return html;
   }
 
 // make additional information normal
 function makeInfoUnfixed(){
   var windowHeight = window.innerHeight;
   if (windowHeight < 525) {
-      $('#extraInfo').css('position', 'relative').css('left', 'auto').css('right','auto')
+      $('#extraInfo').css('position', 'relative').css('left', 'auto').css('right','auto');
   } else {
-    $('#extraInfo').css('position', 'fixed').css('left', '60%').css('right','5%')
-    };
+    $('#extraInfo').css('position', 'fixed').css('left', '60%').css('right','5%');
+    }
 }
 
 
@@ -72,7 +72,7 @@ function randomPokemon(usedPokemonIds, min, max){
   }
   // ad pokemon to list of pokemons that has already been loaded
   usedPokemonIds.push(id);
-  return id
+  return id;
 }
 
 // create responsive picture of a pokemon with a certain id 
@@ -129,7 +129,7 @@ function createPokeCard(id, element){
       //that was selected by the user
       showCertainType(getSelectedType());
     }
-  })
+  });
 }
 
 // load data for a given pokemon in a special element
@@ -158,7 +158,7 @@ function showDetails(id){
 
         if (value == 'types'){
           // add "Type" row
-          htmlElement.append('<tr><td><p><strong>Type</strong></p></td><td><p id = "types"></p></tr>')
+          htmlElement.append('<tr><td><p><strong>Type</strong></p></td><td><p id = "types"></p></tr>');
           
           // add types to next cell
           $.each(data[value], function(index, value){
@@ -173,11 +173,11 @@ function showDetails(id){
         } else {
           // add all other characteristics
           htmlElement.append('<tr><td><p><strong>' + capitalizeFirstLetter(value) + ' </strong></p></td><td><p>'+ data[value] + '</p></td></tr>');
-        };
+        }
 
       });
 
-};
+}
 
 
 // show pokemons that are of a certain type
@@ -196,16 +196,16 @@ function showCertainType(type) {
 
     } else {
         // variable for keeping type of a Pokemon of this card
-        var types = []
+        var types = [];
         // id of this Pokemon
         pokemonID = $(card).attr('id');
 
-        typesObj = pokemonDict[pokemonID].types
+        typesObj = pokemonDict[pokemonID].types;
         // go through each Types object of this Pokemon
         $.each(typesObj, function(index, typeArray){
           // add name of the Type to "types" array
           types.push(typeArray.name);
-        })
+        });
 
         // go through all types of a given Pokemon
         $.each(types, function(index, typeName){
@@ -232,7 +232,7 @@ function showCertainType(type) {
         
       }
     
-  })
+  });
 }
 
 // get all possible types of pokemons
@@ -249,15 +249,15 @@ function getTypes(){
 
         types.push(value.name);
         $('select.form-control').append("<option>" + value.name + "</option>");
-      })
+      });
     }
-  })
+  });
 }
 
 // load given number of pokemons (articles)
 function pokeLoad(num){
 
-  var htmlElement = $('#pokedex')
+  var htmlElement = $('#pokedex');
 
   for (var i = 0; i < num; i++){
     var id = randomPokemon(usedPokemonIds, 1, 718);
@@ -275,24 +275,24 @@ $('document').ready(makeInfoUnfixed());
 // filter Pokemons
 $('#typeSelector').change(function(){
   showCertainType(getSelectedType());
-})
+});
 
 // show additional Info
 $('html').on('click', 'section.row article', function(){
   id = $(this).attr('id');
   showDetails(id);
-})
+});
 
 // Close additional Info
 $('html').on('click', '#extraInfo', function(){
   $('#pDetailsTable').empty();
   $('#pDetails').empty();
-})
+});
 
 // Load More
 $('#loadMore').click(function(){
   pokeLoad(numOnLoadMore);
-})
+});
 
 //animate poketcards
 
