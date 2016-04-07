@@ -78,7 +78,6 @@ function createPokeCard(id, element){
      },
     complete: function() {
       $('#imgAnimationElement'+id).remove();
-      console.log('#imgAnimationElement', id);
     },
     success: function(data) {
 

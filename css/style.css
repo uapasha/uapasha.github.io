@@ -8,6 +8,20 @@ body {
 	background-color: #eee;
 }
 
+table {
+	margin-top: 40px;
+}
+
+td {
+	width: 50%;
+	font-size: 1.1em;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .headerRow {
 	background-color: #a94442;
 	margin-bottom: 10px;
@@ -16,12 +30,9 @@ body {
 .selectorRow {
 	background-color: #323232;
 	color: white;
+	margin-bottom: 5px;
 }
 
-/*img.img-responsive.center-block {
-	max-height: 60%;
-
-}*/
 
 
 div div .typeButton {
@@ -33,37 +44,72 @@ div div .typeButton {
   border:hidden;
   margin: 0px 2px;
   }
-.h1, .h2, .h3, h1, h2, h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+
+
+.imgDiv {
+	height: 60%;
 }
-/*.typeButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
-	box-shadow:inset 0px 1px 0px 0px #fff6af;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
-	background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-	background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-	background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-	background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
-	background-color:#ffec64;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	display:inline;
-	color:#333333;
-	font-weight:bold;
-	padding: 2px 6px;
-	margin: 0px 2px;
-	text-shadow:0px 1px 0px #ffee66;
-	}
-*/
 
+.pokeDexCard{
+	border-radius: 10px;
+	border: thin solid black;
+	margin: 10px;
+	padding: 10px;
+	height: 270px;
+	max-width: 300px;
+	background-color: #607D8B;
+	color: white;
+}
 
+#pDetails {
+	height: 150px;
+	margin-bottom: 10px;
+}
 
+#loadMore {
+	margin-bottom: 10px;
+}
 
+.form-control {
+	margin: 20px;
+}
+
+#extraInfo {
+	width: 35%;
+	position: fixed;
+	left: 60%;
+	right: 5%;
+}
+
+#animation {
+	margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#animationContainer{
+	background-color: #eee;
+	border: hidden;
+}
+
+#pDetailsTable p {
+	margin: 0px;
+}
+
+.row article:hover, #pDetailsTable:hover, #pDetails:hover {
+	cursor: pointer;
+}
+
+#typeSelector{
+	display: inline;
+	width: 50%;
+}
+
+/*////////////   styles for types pseudo-buttons /////////////*/
 .Normal, .Ghost, .Psychic {
 	background-color: #C5EDFA;
 	color: black;
@@ -109,70 +155,3 @@ div div .typeButton {
 .Shadow {
 	background-color: gray;
 }
-
-.imgDiv {
-	height: 60%;
-}
-.pokeDexCard{
-
-	border-radius: 10px;
-	border: thin solid black;
-	margin: 10px;
-	padding: 10px;
-	height: 270px;
-	max-width: 300px;
-	background-color: #607D8B;
-	color: white;
-}
-
-#pDetails {
-	height: 150px;
-	margin-bottom: 10px;
-}
-.form-control {
-	margin: 20px;
-}
-
-
-#extraInfo {
-	width: 35%;
-	position: fixed;
-	left: 60%;
-	right: 5%;
-}
-
-#animation {
-	margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-#animationContainer{
-	background-color: #eee;
-	border: hidden;
-}
-
-td {
-	width: 50%;
-	font-size: 1.1em;
-}
-
-#pDetailsTable p {
-	margin: 0px;
-}
-
-.row article:hover, #pDetailsTable:hover, #pDetails:hover {
-	cursor: pointer;
-}
-
-#typeSelector{
-	display: inline;
-	width: 50%;
-}
-
-table {
-	margin-top: 40px;
-}
-
