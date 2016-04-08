@@ -8,8 +8,9 @@ var pokemonDict = {};
 
 // number of Pokemon to load on first and additional load
 var firstLoad = 12;
-
 var numOnLoadMore = 6;
+
+var lastPokemon = 718;
 
 // names of characteristics that are going to be displayed
 var characteristics = ['types', 'attack', 'defense', 'hp', 'sp_atk', 'sp_def', 
@@ -66,13 +67,20 @@ function makeInfoUnfixed(){
 function randomPokemon(usedPokemonIds, min, max){
   // pick a random pokemon
   var id = randomFromInterval(min, max);
-  // check if it isn't in the list already
-  while (usedPokemonIds.indexOf(id) != -1){
-    id = randomFromInterval(min, max);
+  
+  //avoid infinite loop
+  if (usedPokemonIds.length < lastPokemon) {
+    // check if it isn't in the list already
+    while (usedPokemonIds.indexOf(id) != -1){
+      id = randomFromInterval(min, max);
+    }
+      // ad pokemon to list of pokemons that has already been loaded
+    usedPokemonIds.push(id);
+    return id;
+  } else {
+    throw "All pokemons have been loaded, You can not load more";
   }
-  // ad pokemon to list of pokemons that has already been loaded
-  usedPokemonIds.push(id);
-  return id;
+
 }
 
 // create responsive picture of a pokemon with a certain id 
@@ -260,10 +268,21 @@ function pokeLoad(num){
   var htmlElement = $('#pokedex');
 
   for (var i = 0; i < num; i++){
-    var id = randomPokemon(usedPokemonIds, 1, 718);
+    // check if all pokemons where already loaded
+    if (usedPokemonIds.length >= lastPokemon) {
+
+      html = '<div class = "col-md-12" id = "noMorePokemons"><h3>No More Pokemons to Load</h3></article>';
+      $('#buttonSection').append(html);
+      $('#loadMore').remove();
+      break;
+
+   } else {
+    var id = randomPokemon(usedPokemonIds, 1, lastPokemon);
     createPokeCard(id, $(htmlElement));
+    }
   }
 }
+
 
 //////////////////////////////////
 ///////////// initial load ///////////////

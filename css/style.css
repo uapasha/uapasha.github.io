@@ -110,6 +110,11 @@ div div .typeButton {
 	width: 50%;
 }
 
+#noMorePokemons {
+    margin: 10px;
+    border: 1px solid #323232;
+    border-radius: 8px;
+}
 
 /*////////////// add pointers on hover //////////////////////*/
 .row article:hover, #pDetailsTable:hover, #pDetails:hover {
